@@ -5,8 +5,8 @@ In this repository, we use interactive code via Jupyter Notebook and Python as w
 
 ## Asset Capacity & Delta Voltage OE
 The Asset Capacity & Delta Voltage OE is more advanced than the The Asset Capacity & Critical Voltage OE as it can capture better the daily voltage variations due to interactions with the upstream HV network. At a given moment in time, it considers the spare thermal capacity of the distribution transformer (i.e., thermal capacity minus net demand of all the customers) and splits it among active customers. Then, using the spare capacity allocated to the critical customer (i.e., the customer located furthest from the distribution transformer), it estimates the voltage at the critical customer via two sensitivity curves, one that relates the aggregated P at the distribution transformer to its voltage magnitude and another that relates the aggregated P at the distribution transformer to the delta voltage between the distribution transformer and the critical customer.
-- Monitoring: At the secondary of the transformer (aggregated P, aggregated Q, and voltage magnitude, all per phase), and at the critical customer (voltage magnitude).
-- Electrical models needed: None.
+- Required Monitoring: At the secondary of the transformer (aggregated P, aggregated Q, and voltage magnitude, all per phase), and at the critical customer (voltage magnitude).
+- Required Electrical Models: None.
 
 For simplicity, the case study used to demonstrate the OE algorithm corresponds to a low voltage (LV) network without modelling the upstream high voltage (HV) network. Although some adaptations have been made to ensure realistic voltage fluctuations at the distribution transformer of the LV network, the results are not exactly the same as those presented in the Final Report of the project (which used an integrated HV-LV network model). Nevertheless, the behaviour of the OE algorithm and the qualitative nature of the results remain the same.
 
